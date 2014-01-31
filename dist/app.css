@@ -7821,26 +7821,20 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-.image {
-  width: 350px;
-  height: 100px;
-  background-image: url("http://placehold.it/350x150");
-}
-
-/* line 10, ../scss/style.scss */
+/* line 8, ../scss/style.scss */
 .image:after {
-  content: attr(data-score);
+  content: attr(data-year);
   position: absolute;
   opacity: 0;
   transition: 1s;
 }
 
-/* line 18, ../scss/style.scss */
+/* line 16, ../scss/style.scss */
 .image:hover::after {
   opacity: 1;
 }
 
-/* line 25, ../scss/style.scss */
-.image[data-score]::after {
+/* line 22, ../scss/style.scss */
+.image[data-year]::after {
   color: #c00;
 }
