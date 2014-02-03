@@ -7821,7 +7821,7 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-/* line 8, ../scss/style.scss */
+/* line 5, ../scss/style.scss */
 .image:after {
   content: attr(data-year);
   position: absolute;
@@ -7829,12 +7829,21 @@ table {
   transition: 1s;
 }
 
-/* line 16, ../scss/style.scss */
+/* line 13, ../scss/style.scss */
 .image:hover::after {
   opacity: 1;
 }
 
-/* line 22, ../scss/style.scss */
+/* line 18, ../scss/style.scss */
 .image[data-year]::after {
   color: #c00;
+}
+
+/*==============
+Other
+==============*/
+/* line 25, ../scss/style.scss */
+header {
+  padding-bottom: 30px;
+  text-align: center;
 }
