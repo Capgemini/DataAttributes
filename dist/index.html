@@ -1,31 +1,89 @@
 <!DOCTYPE html>
 <html ng-app="app">
 
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
-		<title>DataAttributes</title>
-		<base href="/">
-		<link rel="stylesheet" type="text/css" href="app.css" media="screen, projector, print">
-		<script src="vendor/foundation/js/vendor/modernizr.js"></script>
-	</head>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+	<title>DataAttributes</title>
+	<base href="/">
+	<link rel="stylesheet" type="text/css" href="app.css" media="screen, projector, print">
+	<script src="vendor/foundation/js/vendor/modernizr.js"></script>
+</head>
 
-	<body>
-		
-		
-		<!-- ng-view for main content -->
-		<div class="row wrapper" ng-view=""></div>
-		
+<body>
+
+
+	<!-- ng-view for main content -->
+	<div class="row wrapper" ng-view="">
+		<div class="small-12 columns">	
+			<div class="row">
+				<div class="small-12 columns">
+					<h1>Data Attributes</h1>
+					<h5>Hovering over each film poster will reveal the non-visible data attribute which is the film's rating out of 10.</h5>
+					<h5>The data has then been used within a script to calculate the average rating of the 4 films</h5>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="small-12 columns">
+					<!-- <ng-include src="'app/movies.view.html'"></ng-include> -->
+					<ul id="posters" class="small-block-grid-1 medium-block-grid-2 large-block-grid-4">
+						<li>
+							<div id="barton" class="image" data-year="1991" data-rating="7.8">
+								<img src="assets/img/barton.jpg">
+							</div>
+						</li>
+						<li>
+							<div id="fargo"class="image" data-year="1996" data-rating="8.2">
+								<img src="assets/img/fargo.jpg">
+							</div>
+						</li>
+						<li>
+							<div id="brother" class="image" data-year="2000" data-rating="7.7">
+								<img src="assets/img/brother.jpg">
+							</div>
+						</li>
+						<li>
+							<div id="inside" class="image" data-year="2014" data-rating="7.9">
+								<img src="assets/img/inside.jpg">
+							</div>
+						</li>
+					</ul>
+					<h5 id='average-rating'></h5>
+				</div>	
+			</div>
+		</div>	
+	</div>
+
 
 		<!-------------------------------- Scripts --------------------------------------------->
 
-		<!----------------------------  Vendor Scripts  ---------------------------------------->
+		<!----------------------------  Vendor Scripts  ---------------------------------------
 		<script type="text/javascript" src="vendor/angular/angular.min.js"></script>
 		<script type="text/javascript" src="vendor/angular-route/angular-route.min.js"></script>
 		
 		
 
-		<!----------------------------  Application Script  ------------------------------------>
-		<script type="text/javascript" src="app.js"></script>
+		----------------------------  Application Script  ------------------------------------>
+		<!-- <script type="text/javascript" src="app.js"></script> -->
+		<script>
+			var barton = document.querySelector('#barton');
+			var bartonRating = parseFloat(barton.dataset.rating);
+
+			var fargo = document.querySelector('#fargo');
+			var fargoRating = parseFloat(fargo.dataset.rating);
+
+			var brother = document.querySelector('#brother');
+			var brotherRating = parseFloat(brother.dataset.rating);
+
+			var inside = document.querySelector('#inside');
+			var insideRating = parseFloat(inside.dataset.rating);
+
+			var sum = bartonRating + fargoRating + brotherRating + insideRating;
+
+			var average = sum / 4;
+
+			document.getElementById('average-rating').innerText = 'The average rating is ' + average;
+		</script>
 	</body>
-</html>
+	</html>
