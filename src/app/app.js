@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('app', ['templates', 'common', 'ngRoute'])
+angular.module('app', ['templates', 'common', 'ngRoute', 'movies'])
 	.config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
 		$routeProvider
 			.when('/', {
