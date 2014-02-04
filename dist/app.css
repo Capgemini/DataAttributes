@@ -7823,7 +7823,7 @@ table {
 }
 /* line 5, ../scss/style.scss */
 .image:after {
-  content: attr(data-year);
+  content: attr(data-rating);
   position: absolute;
   opacity: 0;
   transition: 1s;
@@ -7846,4 +7846,9 @@ Other
 header {
   padding-bottom: 30px;
   text-align: center;
+}
+
+/* line 30, ../scss/style.scss */
+#posters {
+  padding: 25px 0 25px;
 }
