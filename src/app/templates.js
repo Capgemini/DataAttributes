@@ -14,7 +14,30 @@ angular.module('app/app.view.html', []).run(['$templateCache', function($templat
 		'\n' +
 		'	<div class="row">\n' +
 		'		<div class="small-12 columns">\n' +
-		'			<ng-include src="\'app/movies.view.html\'"></ng-include>\n' +
+		'			<!-- <ng-include src="\'app/movies.view.html\'"></ng-include> -->\n' +
+		'			<ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-4">\n' +
+		'				<li>\n' +
+		'					<div id="barton" class="image" data-year="1991" data-rating="7.8">\n' +
+		'						<img src="assets/img/barton.jpg">\n' +
+		'					</div>\n' +
+		'				</li>\n' +
+		'				<li>\n' +
+		'					<div id="fargo"class="image" data-year="1996" data-rating="8.2">\n' +
+		'						<img src="assets/img/fargo.jpg">\n' +
+		'					</div>\n' +
+		'				</li>\n' +
+		'				<li>\n' +
+		'					<div id="brother" class="image" data-year="2000" data-rating="7.7">\n' +
+		'						<img src="assets/img/brother.jpg">\n' +
+		'					</div>\n' +
+		'				</li>\n' +
+		'				<li>\n' +
+		'					<div id="inside" class="image" data-year="2014" data-rating="7.9">\n' +
+		'						<img src="assets/img/inside.jpg">\n' +
+		'					</div>\n' +
+		'				</li>\n' +
+		'			</ul>\n' +
+		'			<p id=\'average-rating\'></p>\n' +
 		'		</div>	\n' +
 		'	</div>\n' +
 		'</div>	');
