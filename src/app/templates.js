@@ -7,7 +7,8 @@ angular.module('app/app.view.html', []).run(['$templateCache', function($templat
 		'	<div class="row">\n' +
 		'		<div class="small-12 columns">\n' +
 		'			<h1>Data Attributes</h1>\n' +
-		'			<h5>Hovering over each film poster will reveal the non-visible data attribute which is the year the film was released</h5>\n' +
+		'			<h5>Hovering over each film poster will reveal the non-visible data attribute which is the year the film was released.</h5>\n' +
+		'			<h5>This data has been used to sort the films in order of oldest to most recent.</h5>\n' +
 		'		</div>\n' +
 		'	</div>\n' +
 		'\n' +
