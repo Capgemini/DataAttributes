@@ -1,0 +1,9 @@
+<div ng-controller="MoviesCtrl">
+	<ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-4">
+		<li ng-repeat="movie in movies | orderBy:'year'">
+			<div class="image" data-year="{{movie.year}}" data-rating="{{movie.rating}}">
+				<img src="{{movie.poster}}">
+			</div>
+		</li>
+	</ul>
+</div>
